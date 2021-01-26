@@ -42,7 +42,7 @@ export function incrementCaught(_id) {
     const stats = getPokeStats();
     // check if caught before
     const poke = findByUnderScoreId(stats, _id);
-
+    // increment the caught count
     poke.caught++;
 
     setPokeStats(stats);

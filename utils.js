@@ -13,9 +13,10 @@ export function getRandomPokemon() {
 export function findByUnderScoreId(array, id) {
     // loop through pokemonData array, find matching id
     for (let item of array) {
-        if (item._id === id);
+        if (item._id === id) {
 
-        return item;
+            return item;
+        }
     }
 }
 
@@ -65,7 +66,7 @@ export function renderPokeImage(pokemonItem) {
     image.addEventListener('click', () => {
         incrementCaught(pokemonItem._id);
         // stop game after 10 turns, direct to results page
-        if (numberOfTurns <= 10) {
+        if (numberOfTurns < 10) {
             setThreePokemon();
         } else {
             window.location = './results/index.html';
