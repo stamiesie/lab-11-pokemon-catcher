@@ -8,8 +8,8 @@ const table = document.getElementById('results-table');
 const resultsData = getPokeStats();
 
 for (let item of resultsData) {
-    const pokeChar = findByUnderScoreId(pokemonData, item.id);
-
+    const pokeChar = findByUnderScoreId(pokemonData, item._id);
+    console.log(pokeChar);
     let tr = renderResults(item, pokeChar);
 
     table.append(tr);
