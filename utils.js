@@ -1,4 +1,5 @@
-import pokemonData from './data.js';
+import { pokemonData } from './data.js';
+import { incrementCaught, incrementSeen } from './localStorage.js';
 
 let numberOfTurns = 0;
 
@@ -36,5 +37,39 @@ export function setThreePokemon() {
     const img2 = renderPokeImage(pokeTwo);
     const img3 = renderPokeImage(pokeThree);
 
+    incrementSeen(pokeOne._id);
+    incrementSeen(pokeTwo._id);
+    incrementSeen(pokeThree._id);
 
+    // make div for characters 
+    const div = document.getElementById('characters');
+
+    // use textContent to clear out div for each new game
+    div.textContent = '';
+
+    // append the div to the HTML
+    div.append(img1, img2, img3);
+}
+
+export function renderPokeImage(pokemonItem) {
+    // make an img
+    const image = document.createElement('img');
+
+    // assign the image an src
+    image.src = pokemonItem.url_image;
+
+    // assign image a class
+    image.classList.add('poke-img');
+
+    // make the image a listener to play the game
+    image.addEventListener('click', () => {
+        incrementCaught(pokemonItem._id);
+        // stop game after 10 turns, direct to results page
+        if (numberOfTurns <= 10) {
+            setThreePokemon();
+        } else {
+            window.location = './results/index.html';
+        }
+    });
+    return image;
 }
