@@ -69,7 +69,7 @@ export function renderPokeImage(pokemonItem) {
         if (numberOfTurns < 10) {
             setThreePokemon();
         } else {
-            window.location = '../results/index.html';
+            window.location = './results';
         }
     });
     return image;
