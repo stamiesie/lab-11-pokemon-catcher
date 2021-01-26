@@ -1,1 +1,10 @@
-/* add home page styles here */
+img {
+        height: 150px;
+        width: 150px;
+}
+
+.characters {
+    display: flex;
+    flex-direction: row;
+
+}

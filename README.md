@@ -1,6 +1,6 @@
 # EDIT-THIS-README
-1. Load three pokemon
     -make dev branch
+1. Load three pokemon
     -make html divs for instructions and images
         -hard code the three images to test html setup
     -three new pokemon show up on the page (function)
