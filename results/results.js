@@ -24,19 +24,19 @@ newGameButton.addEventListener('click', () => {
 
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'horizontalBar',
     data: {
         labels: makeLabelArray(resultsData),
         datasets: [
             {
-                label: '# of times seen',
+                label: 'TIMES SEEN',
                 data: makeSeenArray(resultsData),
                 backgroundColor: 'rgba(253, 194, 99, 0.6)',
                 borderColor: 'rgba(253, 194, 99, 1)',
                 borderWidth: 2
             },
             {
-                label: '# of times caught',
+                label: 'TIMES CAUGHT',
                 data: makeCaughtArray(resultsData),
                 backgroundColor: 'rgba(96, 216, 132, 0.6)',
                 borderColor: 'rgba(96, 216, 132, 1)',
@@ -48,7 +48,7 @@ var myChart = new Chart(ctx, {
     options: {
         responsive: false,
         scales: {
-            yAxes: [{
+            xAxes: [{
                 ticks: {
                     beginAtZero: true,
                     stepSize: 1

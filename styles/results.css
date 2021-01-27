@@ -1,17 +1,28 @@
 body {
     background-image: url("../assets/poke-background.jpg");
     background-size: cover;
+    background-position: 100% 33%;
 }
 
 .title {
     font-size: 3.0em;
     margin-top: 20px;
+    color: white;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.7)
+}
+
+.all-results {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 #new-game-button {
     width: 150px;
     height: 50px;
     font-size: 1.3em;
+    margin: 10px;
     text-align: center;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.85);
@@ -20,15 +31,16 @@ body {
 }
 
 #new-game-button:hover {
-    background-color: rgb(253, 194, 99);
+    background-color: rgb(250, 253, 99);
     transform: scale(1.1);
 }
 
 #results-table {
     width: 400px;
+    height: 600px;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
-    margin: 15px;
+    margin: 20px;
     border-radius: 10px;
     border: 2px solid black;
     box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.55);
@@ -44,5 +56,5 @@ td {
     border: 2px solid black;
     box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.55);
     background-color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 70px;
+    margin: 20px;
 }
