@@ -1,14 +1,14 @@
 body {
     background-image: url("../assets/poke-background.jpg");
     background-size: cover;
-    background-position: 100% 33%;
+    background-position: 100% 25%;
     
 }
 
 .title {
     font-size: 3.0em;
     margin-top: 40px;
-    color: white;
+    color: rgb(253, 245, 198);
     text-shadow: 3px 3px rgba(0, 0, 0, 0.7)
 }
 
@@ -18,7 +18,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 2.0em;
-    color: white;
+    color: rgb(253, 245, 198);
     text-shadow: 3px 3px rgba(0, 0, 0, 0.7)
 }
 
