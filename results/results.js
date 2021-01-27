@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import { getPokeStats } from '../localStorage.js';
 import { findByUnderScoreId } from '../utils.js';
 import { pokemonData } from '../data.js';
