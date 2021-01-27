@@ -31,16 +31,16 @@ var myChart = new Chart(ctx, {
             {
                 label: '# of times seen',
                 data: makeSeenArray(resultsData),
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
+                backgroundColor: 'rgba(253, 194, 99, 0.6)',
+                borderColor: 'rgba(253, 194, 99, 1)',
+                borderWidth: 2
             },
             {
                 label: '# of times caught',
                 data: makeCaughtArray(resultsData),
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
+                backgroundColor: 'rgba(96, 216, 132, 0.6)',
+                borderColor: 'rgba(96, 216, 132, 1)',
+                borderWidth: 2
             }
 
         ]
@@ -50,7 +50,8 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    stepSize: 1
                 }
             }]
         }
